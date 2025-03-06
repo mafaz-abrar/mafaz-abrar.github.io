@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: '/mafaz-abrar.github.io/',
-  basePath: '/mafaz-abrar.github.io',
   output: 'export',
 };
 
