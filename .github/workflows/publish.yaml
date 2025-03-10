@@ -34,7 +34,6 @@ jobs:
 
       - name: See files
         run: |
-          echo Test the next build action,
           ls -a
 
       - name: Upload artifact
