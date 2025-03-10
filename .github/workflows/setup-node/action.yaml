@@ -8,7 +8,7 @@ runs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: "lts/*"
 
     # Cache npm packages for speeding up the next step
     - name: Cache dependencies
