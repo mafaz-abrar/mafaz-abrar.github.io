@@ -32,6 +32,10 @@ jobs:
       - name: Build with Next.js
         run: npx next build
 
+      - name: Create test directory
+        run: |
+          mkdir test
+
       - name: See files
         run: |
           ls -a
