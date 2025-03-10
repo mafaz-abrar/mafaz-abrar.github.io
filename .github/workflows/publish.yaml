@@ -17,7 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,6 +31,11 @@ jobs:
 
       - name: Build with Next.js
         run: npx next build
+
+      - name: See files
+        run: |
+          echo Test the next build action,
+          ls -a
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
