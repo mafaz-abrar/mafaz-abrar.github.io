@@ -1,15 +1,30 @@
 @import "tailwindcss";
 
+/* mafaz: Since we're using Tailwind 4.0, we don't need a tailwind.config.js, */ 
+/* mafaz: and all those styles can be placed directly into the css file. */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ce0202;
+  --foreground: #711010;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+}
+
+@theme {
+  --animate-typewrite: typewriter 2s steps(20) forwards, blink-caret .75s step-end infinite;
+  @keyframes typewriter {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% {border-color: white}
+  }
 }
 
 @media (prefers-color-scheme: dark) {
